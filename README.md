@@ -3,7 +3,7 @@
 
 ## Usage
 
-Create .env file with:
+Create .env file in root with:
 
 PORT=PORT
 API_KEY=MY_API_KEY
