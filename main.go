@@ -2,7 +2,6 @@ package main
 
 import (
 	"html/template"
-	"log"
 	"net/http"
 
 	"github.com/Skjaldbaka17/WhoTheFuckSaidThat/utils"
@@ -30,7 +29,6 @@ func main() {
 	r.PathPrefix("/assets/").Handler(s)
 
 	err := http.ListenAndServe(":"+utils.GetEnvVariable("PORT"), r)
-	log.Println("HERE", utils.GetEnvVariable("PORT"))
 	if err != nil {
 		panic(err)
 	}

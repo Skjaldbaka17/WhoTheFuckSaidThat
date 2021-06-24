@@ -7,6 +7,7 @@ Create .env file with:
 
 PORT=PORT
 API_KEY=MY_API_KEY
+API_BASE_URL=http://quotel-api.com
 
 and run 
 
