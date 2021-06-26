@@ -6,8 +6,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/joho/godotenv"
 )
 
 // Gets the random quote from the api
@@ -37,9 +35,5 @@ func GetRandomQuote() (ResponseBody, error) {
 }
 
 func GetEnvVariable(key string) string {
-	err := godotenv.Load("./.env")
-	if err != nil {
-		log.Printf("Error loading .env file")
-	}
 	return os.Getenv(key)
 }

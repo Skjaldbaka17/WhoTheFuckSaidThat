@@ -14,3 +14,12 @@ and run
 ```go
 go run main.go
 ```
+
+## AWS Lambda Functions
+
+Uploading each function as .zip:
+
+```zsh
+GOARCH=amd64 GOOS=linux go build main.go &&
+zip main.zip main 
+```
