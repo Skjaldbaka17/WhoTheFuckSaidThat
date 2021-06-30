@@ -1,0 +1,1 @@
+- [ ] Set up SAM or CloudConfiguration and/or when pushing to master-repo then also updating the static files in S3

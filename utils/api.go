@@ -10,7 +10,7 @@ import (
 
 // Gets the random quote from the api
 func GetRandomQuote() (ResponseBody, error) {
-	url := GetEnvVariable("API_BASE_URL") + "/api/quotes/random"
+	url := GetEnvVariable("API_BASE_URL") + "/quotes/random"
 	reqBody := PostRequestBody{ApiKey: GetEnvVariable("API_KEY")}
 	var jsonStr = []byte(reqBody.ToString())
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
