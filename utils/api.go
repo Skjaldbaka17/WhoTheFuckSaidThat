@@ -11,8 +11,8 @@ import (
 // Gets the random quote from the api
 func GetRandomQuote() (ResponseBody, error) {
 	url := GetEnvVariable("API_BASE_URL") + "/quotes/random"
-	reqBody := PostRequestBody{ApiKey: GetEnvVariable("API_KEY")}
-	var jsonStr = []byte(reqBody.ToString())
+	var jsonStr = []byte("{}")
+
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
 
 	if err != nil {
@@ -20,6 +20,7 @@ func GetRandomQuote() (ResponseBody, error) {
 		return ResponseBody{}, err
 	}
 	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("x-api-key", GetEnvVariable("API_KEY"))
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
