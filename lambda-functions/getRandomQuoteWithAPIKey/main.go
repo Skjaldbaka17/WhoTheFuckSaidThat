@@ -13,7 +13,7 @@ type Request struct {
 }
 
 func Handler(request Request) (utils.ResponseBody, error) {
-	respBody, err := utils.GetRandomQuote()
+	respBody, err := utils.GetRandomQuoteNew()
 	log.Println(respBody)
 	if err != nil {
 		return utils.ResponseBody{}, err
